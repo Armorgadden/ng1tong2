@@ -1,23 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { UpgradeModule} from '@angular/upgrade/static';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { UpgradeModule } from '@angular/upgrade/static';
 import moduleName from './ng1/app.module.ajs';
 
 @NgModule({
-  declarations: [
-    
-  ],
-  imports: [
-    BrowserModule,
-    UpgradeModule
-  ],
-  providers: []
+    imports: [
+        BrowserModule,
+        UpgradeModule
+    ]
 })
-export class AppModule { 
-    constructor(private upgrade: UpgradeModule){
+export class AppModule {
+    constructor(private upgrade: UpgradeModule) { }
 
-    }
     ngDoBootstrap(){
         this.upgrade.bootstrap(document.documentElement, [moduleName], {strictDi: true});
     }
