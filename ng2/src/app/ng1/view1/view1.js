@@ -1,6 +1,7 @@
 'use strict';
+const MODULE_NAME = 'viewModule';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module(MODULE_NAME, ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -12,3 +13,5 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', [function() {
 
 }]);
+
+export default MODULE_NAME;
