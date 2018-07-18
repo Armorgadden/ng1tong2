@@ -1,5 +1,6 @@
 'use strict';
 const MODULE_NAME = 'viewModule';
+import * as angular from 'angular';
 
 angular.module(MODULE_NAME, ['ngRoute'])
 
